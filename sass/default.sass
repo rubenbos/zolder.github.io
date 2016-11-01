@@ -1,0 +1,431 @@
+/* project: Zolder */
+/* author: Ruben Bos */
+
+@import "compass/css3"
+
+html
+	font-family: "Gotham Rounded SSm A", "Gotham Rounded SSm B", Avenir, Helvetica, Arial !Important
+	font-size: 62.5%
+	font-weight: 500
+	-webkit-font-smoothing: antialiased
+
+body
+	margin: 0
+	padding: 0
+	background: #85c3b4 url(../images/bg_body.png) repeat-x center 718px
+	background-size: 117px 772px
+
+*
+	@include box-sizing(border-box)
+
+// keyframes
+
+// keyframes mixin
+=keyframes($name)
+	@-webkit-keyframes #{$name}
+		@content
+	@-moz-keyframes #{$name}
+		@content
+	@-ms-keyframes #{$name}
+		@content
+	@keyframes #{$name}
+		@content
+
+@mixin animation($duration, $delay, $fillmode)
+	-webkit-animation-duration: $duration
+	-moz-animation-duration: $duration
+	animation-duration: $duration
+	-webkit-animation-delay: $delay
+	-moz-animation-delay: $delay
+	animation-delay: $delay
+	-webkit-animation-fill-mode: $fillmode
+	-moz-animation-fill-mode: $fillmode
+	animation-fill-mode: $fillmode
+
+@mixin animation-simple($duration, $delay)
+	-webkit-animation-duration: $duration
+	-moz-animation-duration: $duration
+	animation-duration: $duration
+	-webkit-animation-delay: $delay
+	-moz-animation-delay: $delay
+	animation-delay: $delay
+
+// use of keyframes mixin
++keyframes(openboxleft)
+	0%
+		-webkit-transform: rotate(134deg)
+		-moz-transform: rotate(134deg)
+	100%
+		-webkit-transform: rotate(0deg)
+		-moz-transform: rotate(0deg)
+
+// use of keyframes mixin
++keyframes(openboxright)
+	0%
+		-webkit-transform: rotate(-134deg)
+		-moz-transform: rotate(-134deg)
+	100%
+		-webkit-transform: rotate(0deg)
+		-moz-transform: rotate(0deg)
+
+/* default styles */
+
+header
+	width: 100%
+	height: 718px
+	overflow: hidden
+	position: relative
+	background: #020204
+
+	h1
+		width: 540px
+		height: 55px
+		background: url(../images/logo_zolder.png) no-repeat center top
+		position: absolute
+		top: 318px
+		left: 50%
+		margin-left: -270px
+		opacity: 0
+		@include animation(3s,4s,forwards)
+
+		span
+			overflow: hidden
+			height: 0
+			width: 0
+			position: absolute
+
+	.background
+		max-width: 1600px
+		height: 718px
+		background: url(../images/bg_header.jpg) no-repeat center top
+		background-size: cover
+		margin: 0 auto
+
+		.dark
+			background: #010506
+			width: 100%
+			height: 100%
+			@include animation-simple(1.8s,0.5s)
+
+		.elements
+			position: absolute
+			width: 100%
+			height: 100%
+			left: 0
+
+			.bulb
+				background: url(../images/header_lamp.png) no-repeat center top
+				width: 39px
+				height: 165px
+				position: absolute
+				top: 0
+				left: 50%
+				margin-left: -20px
+				@include animation-simple(1s,0.5s)
+
+			.light
+				width: 614px
+				height: 243px
+				background: url(../images/header_light.png) no-repeat center top
+				position: absolute
+				bottom: 160px
+				left: 50%
+				margin-left: -307px
+				opacity: 0
+				@include animation(2s,3.5s,forwards)
+
+			.box
+				width: 223px
+				height: 176px
+				position: absolute
+				bottom: 30px
+				left: 50%
+				margin-left: -111px
+				background: url(../images/img_box.png) no-repeat center bottom
+				opacity: 0
+				@include animation(2s,1s,forwards)
+
+				.box-open-left, .box-open-right
+					width: 53px
+					height: 53px
+
+				.box-open-left
+					float: left
+					background: url(../images/img_box_open_left.png) no-repeat center bottom
+					-webkit-transform: rotate(134deg)
+					-webkit-transform-origin: 50px 50px
+					-webkit-animation-name: openboxleft
+					-moz-transform: rotate(134deg)
+					-moz-transform-origin: 50px 50px
+					-moz-animation-name: openboxleft
+					transform: rotate(134deg)
+					transform-origin: 50px 50px
+					animation-name: openboxleft
+					@include animation(1.5s,2s,forwards)
+					
+				.box-open-right
+					float: right
+					background: url(../images/img_box_open_right.png) no-repeat center bottom
+					-webkit-transform: rotate(-134deg)
+					-webkit-transform-origin: 4px 50px
+					-webkit-animation-name: openboxright
+					-moz-transform: rotate(-134deg)
+					-moz-transform-origin: 4px 50px
+					-moz-animation-name: openboxright
+					transform: rotate(-134deg)
+					transform-origin: 4px 50px
+					animation-name: openboxright
+					@include animation(1.5s,2s,forwards)
+
+
+.main
+	max-width: 1200px
+	margin: 0 auto 50px
+	background: url(../images/main_stairs.png) no-repeat center top
+	background-size: 130px 471px
+	overflow: hidden
+	opacity: 0
+	@include animation(1.8s,0.5s,forwards)
+
+	.demo
+		width: 40%
+		min-width: 280px
+		height: 621px
+		float: left
+		background: transparent url(../images/img_iphone_2x.png) no-repeat right 70px
+		background-size: 264px 551px
+
+	.intro
+		width: 50%
+		padding: 100px 120px 80px
+		float: right
+
+		h2
+			color: #0e2c34
+			font-size: 2.8rem
+			margin: 0 0 5px 0
+			font-weight: 800
+
+		p
+			color: #fff
+			font-size: 2rem
+			font-weight: 400
+			line-height: 3rem
+			margin: 10px 0 20px
+
+		.signup
+			padding: 40px 0 20px 0
+
+			h2
+				margin: 0 0 20px
+
+			.email
+				width: 70%
+				padding: 2px 10px
+				font-size: 1.6rem
+				float: left
+				height: 32px
+				border: 0 none
+				border-radius: 4px
+
+			.button
+				clear: both
+				background-color: #0e2c34
+				border: 0 none
+				border-radius: 4px
+				color: #FFFFFF
+				cursor: pointer
+				display: inline-block
+				font-size: 1.8rem
+				height: 32px
+				line-height: 32px
+				margin: 0px 5px 10px 10px
+				padding: 0
+				text-align: center
+				text-decoration: none
+				vertical-align: top
+				white-space: nowrap
+				width: 20%
+
+footer
+	clear: both
+	float: none
+	width: 100%
+	padding: 0 20px
+	margin: 0
+	overflow: hidden
+	display: block
+	text-align: center
+	font-size: 1.2rem
+	color: #fff
+	background: #0e2c34
+
+	ul
+		list-style: none
+		padding: 0
+		margin: 0
+		clear: both
+		float: none
+		max-width: 1024px
+		margin: 0 auto
+
+		li
+			padding: 25px 0 25px 40px
+			margin: 0
+			float: left
+			line-height: 1.8rem
+
+		li:first-child
+			font-weight: 700
+			font-size: 1.8rem
+			margin-right: 100px
+
+		li:last-child
+			padding: 5px 0 0 10px
+			margin: 0
+			width: 200px
+
+	a
+		color: #fff
+		text-decoration: none
+
+body.subscribe
+	background-position: center top
+
+	.main
+		background: none
+
+	footer
+		ul
+			padding: 25px 20px
+			overflow: hidden
+
+@media (min-width: 480px) and (max-width: 1024px) 
+	body
+		background: #85c3b4 url(../images/bg_body.png) repeat-x center 574px
+		background-size: 94px 618px
+
+	header
+		zoom: 0.8
+
+	.main
+		background-position: center -100px !important
+
+		.intro
+			padding: 80px 30px !important
+
+		.demo
+			min-width: 220px !important
+			background: transparent url(../images/img_iphone_2x.png) no-repeat right 70px
+			background-size: 211px 441px !important
+
+	footer
+		ul
+			padding: 20px 0
+
+			li
+				padding: 5px 0 5px 40px
+
+			li:first-child
+				margin-bottom: 50px
+
+			li:last-child
+				padding: 5px 0 5px 10px
+				width: 200px
+				float: right
+
+@media (max-width: 480px) 
+	body
+		background: #85c3b4 url(../images/bg_body.png) repeat-x center 359px
+		background-size: 68px 361px
+
+	header
+		zoom: 0.5
+
+	.main
+		background-position: center -30px
+		background-size: 65px 235px
+	
+		.intro
+			width: 100%
+			padding: 140px 20px 20px
+			float: none
+			clear: both
+			text-align: center
+
+			h2
+				font-size: 2.2rem
+				margin: 0 0 5px 0
+
+		.demo
+			width: 100%
+			background-position: center center
+
+	footer
+		ul
+			padding: 20px 0
+
+			li
+				padding: 5px 0 5px 40px
+				float: left
+				clear: both
+
+			li:last-child
+				padding: 5px 0 5px 40px
+				width: 200px
+
+@media (max-height: 718px) and (min-width: 480px)
+	// everything 80% less high
+	
+	body
+		background: #85c3b4 url(../images/bg_body.png) repeat-x center 480px
+
+	header
+		max-height: 600px
+
+		h1
+			width: 432px
+			height: 44px
+			background: url(../images/logo_zolder.png) no-repeat center top
+			background-size: 432px 44px
+			margin-left: -216px
+			top: 254px
+
+		.background
+			max-height: 600px
+			background-size: auto 600px
+
+			.elements
+				.bulb
+					background-size: 31px 132px
+					width: 31px
+					height: 132px
+
+				.light
+					width: 492px
+					height: 195px
+					background-size: 492px 195px
+					bottom: 130px
+					margin-left: -246px
+
+				.box
+					width: 178px
+					height: 141px
+					bottom: 30px
+					margin-left: -89px
+					background-size: 105px 105px
+
+					.box-open-left, .box-open-right
+						width: 42px
+						height: 42px
+
+					.box-open-left
+						background-size: 42px 42px
+						-webkit-transform-origin: 40px 40px
+						
+					.box-open-right
+						background-size: 42px 42px
+						-webkit-transform-origin: 4px 40px
+
+	.main
+		background-size: 104px 377px

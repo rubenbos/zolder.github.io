@@ -1,0 +1,5 @@
+Launch php server to run (and see fonts):
+
+php -S localhost:8040
+
+compass watch 

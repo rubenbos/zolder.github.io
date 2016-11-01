@@ -1,0 +1,591 @@
+/* project: Zolder */
+/* author: Ruben Bos */
+/* line 6, ../sass/default.sass */
+html {
+  font-family: "Gotham Rounded SSm A", "Gotham Rounded SSm B", Avenir, Helvetica, Arial !important;
+  font-size: 62.5%;
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 12, ../sass/default.sass */
+body {
+  margin: 0;
+  padding: 0;
+  background: #85c3b4 url(../images/bg_body.png) repeat-x center 718px;
+  background-size: 117px 772px;
+}
+
+/* line 18, ../sass/default.sass */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@-webkit-keyframes openboxleft {
+  0% {
+    -webkit-transform: rotate(134deg);
+    -moz-transform: rotate(134deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+  }
+}
+@-moz-keyframes openboxleft {
+  0% {
+    -webkit-transform: rotate(134deg);
+    -moz-transform: rotate(134deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+  }
+}
+@-ms-keyframes openboxleft {
+  0% {
+    -webkit-transform: rotate(134deg);
+    -moz-transform: rotate(134deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+  }
+}
+@keyframes openboxleft {
+  0% {
+    -webkit-transform: rotate(134deg);
+    -moz-transform: rotate(134deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+  }
+}
+@-webkit-keyframes openboxright {
+  0% {
+    -webkit-transform: rotate(-134deg);
+    -moz-transform: rotate(-134deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+  }
+}
+@-moz-keyframes openboxright {
+  0% {
+    -webkit-transform: rotate(-134deg);
+    -moz-transform: rotate(-134deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+  }
+}
+@-ms-keyframes openboxright {
+  0% {
+    -webkit-transform: rotate(-134deg);
+    -moz-transform: rotate(-134deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+  }
+}
+@keyframes openboxright {
+  0% {
+    -webkit-transform: rotate(-134deg);
+    -moz-transform: rotate(-134deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+  }
+}
+/* default styles */
+/* line 73, ../sass/default.sass */
+header {
+  width: 100%;
+  height: 718px;
+  overflow: hidden;
+  position: relative;
+  background: #020204;
+}
+/* line 80, ../sass/default.sass */
+header h1 {
+  width: 540px;
+  height: 55px;
+  background: url(../images/logo_zolder.png) no-repeat center top;
+  position: absolute;
+  top: 318px;
+  left: 50%;
+  margin-left: -270px;
+  opacity: 0;
+  -webkit-animation-duration: 3s;
+  -moz-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-delay: 4s;
+  -moz-animation-delay: 4s;
+  animation-delay: 4s;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+/* line 91, ../sass/default.sass */
+header h1 span {
+  overflow: hidden;
+  height: 0;
+  width: 0;
+  position: absolute;
+}
+/* line 97, ../sass/default.sass */
+header .background {
+  max-width: 1600px;
+  height: 718px;
+  background: url(../images/bg_header.jpg) no-repeat center top;
+  background-size: cover;
+  margin: 0 auto;
+}
+/* line 104, ../sass/default.sass */
+header .background .dark {
+  background: #010506;
+  width: 100%;
+  height: 100%;
+  -webkit-animation-duration: 1.8s;
+  -moz-animation-duration: 1.8s;
+  animation-duration: 1.8s;
+  -webkit-animation-delay: 0.5s;
+  -moz-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+/* line 110, ../sass/default.sass */
+header .background .elements {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+}
+/* line 116, ../sass/default.sass */
+header .background .elements .bulb {
+  background: url(../images/header_lamp.png) no-repeat center top;
+  width: 39px;
+  height: 165px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -20px;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-delay: 0.5s;
+  -moz-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+/* line 126, ../sass/default.sass */
+header .background .elements .light {
+  width: 614px;
+  height: 243px;
+  background: url(../images/header_light.png) no-repeat center top;
+  position: absolute;
+  bottom: 160px;
+  left: 50%;
+  margin-left: -307px;
+  opacity: 0;
+  -webkit-animation-duration: 2s;
+  -moz-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-delay: 3.5s;
+  -moz-animation-delay: 3.5s;
+  animation-delay: 3.5s;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+/* line 137, ../sass/default.sass */
+header .background .elements .box {
+  width: 223px;
+  height: 176px;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  margin-left: -111px;
+  background: url(../images/img_box.png) no-repeat center bottom;
+  opacity: 0;
+  -webkit-animation-duration: 2s;
+  -moz-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  animation-delay: 1s;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+/* line 148, ../sass/default.sass */
+header .background .elements .box .box-open-left, header .background .elements .box .box-open-right {
+  width: 53px;
+  height: 53px;
+}
+/* line 152, ../sass/default.sass */
+header .background .elements .box .box-open-left {
+  float: left;
+  background: url(../images/img_box_open_left.png) no-repeat center bottom;
+  -webkit-transform: rotate(134deg);
+  -webkit-transform-origin: 50px 50px;
+  -webkit-animation-name: openboxleft;
+  -moz-transform: rotate(134deg);
+  -moz-transform-origin: 50px 50px;
+  -moz-animation-name: openboxleft;
+  transform: rotate(134deg);
+  transform-origin: 50px 50px;
+  animation-name: openboxleft;
+  -webkit-animation-duration: 1.5s;
+  -moz-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-delay: 2s;
+  -moz-animation-delay: 2s;
+  animation-delay: 2s;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+/* line 166, ../sass/default.sass */
+header .background .elements .box .box-open-right {
+  float: right;
+  background: url(../images/img_box_open_right.png) no-repeat center bottom;
+  -webkit-transform: rotate(-134deg);
+  -webkit-transform-origin: 4px 50px;
+  -webkit-animation-name: openboxright;
+  -moz-transform: rotate(-134deg);
+  -moz-transform-origin: 4px 50px;
+  -moz-animation-name: openboxright;
+  transform: rotate(-134deg);
+  transform-origin: 4px 50px;
+  animation-name: openboxright;
+  -webkit-animation-duration: 1.5s;
+  -moz-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-delay: 2s;
+  -moz-animation-delay: 2s;
+  animation-delay: 2s;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+/* line 181, ../sass/default.sass */
+.main {
+  max-width: 1200px;
+  margin: 0 auto 50px;
+  background: url(../images/main_stairs.png) no-repeat center top;
+  background-size: 130px 471px;
+  overflow: hidden;
+  opacity: 0;
+  -webkit-animation-duration: 1.8s;
+  -moz-animation-duration: 1.8s;
+  animation-duration: 1.8s;
+  -webkit-animation-delay: 0.5s;
+  -moz-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+/* line 190, ../sass/default.sass */
+.main .demo {
+  width: 40%;
+  min-width: 280px;
+  height: 621px;
+  float: left;
+  background: transparent url(../images/img_iphone_2x.png) no-repeat right 70px;
+  background-size: 264px 551px;
+}
+/* line 198, ../sass/default.sass */
+.main .intro {
+  width: 50%;
+  padding: 100px 120px 80px;
+  float: right;
+}
+/* line 203, ../sass/default.sass */
+.main .intro h2 {
+  color: #0e2c34;
+  font-size: 2.8rem;
+  margin: 0 0 5px 0;
+  font-weight: 800;
+}
+/* line 209, ../sass/default.sass */
+.main .intro p {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 3rem;
+  margin: 10px 0 20px;
+}
+/* line 216, ../sass/default.sass */
+.main .intro .signup {
+  padding: 40px 0 20px 0;
+}
+/* line 219, ../sass/default.sass */
+.main .intro .signup h2 {
+  margin: 0 0 20px;
+}
+/* line 222, ../sass/default.sass */
+.main .intro .signup .email {
+  width: 70%;
+  padding: 2px 10px;
+  font-size: 1.6rem;
+  float: left;
+  height: 32px;
+  border: 0 none;
+  border-radius: 4px;
+}
+/* line 231, ../sass/default.sass */
+.main .intro .signup .button {
+  clear: both;
+  background-color: #0e2c34;
+  border: 0 none;
+  border-radius: 4px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.8rem;
+  height: 32px;
+  line-height: 32px;
+  margin: 0px 5px 10px 10px;
+  padding: 0;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: top;
+  white-space: nowrap;
+  width: 20%;
+}
+
+/* line 250, ../sass/default.sass */
+footer {
+  clear: both;
+  float: none;
+  width: 100%;
+  padding: 0 20px;
+  margin: 0;
+  overflow: hidden;
+  display: block;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #fff;
+  background: #0e2c34;
+}
+/* line 263, ../sass/default.sass */
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  clear: both;
+  float: none;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+/* line 272, ../sass/default.sass */
+footer ul li {
+  padding: 25px 0 25px 40px;
+  margin: 0;
+  float: left;
+  line-height: 1.8rem;
+}
+/* line 278, ../sass/default.sass */
+footer ul li:first-child {
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin-right: 100px;
+}
+/* line 283, ../sass/default.sass */
+footer ul li:last-child {
+  padding: 5px 0 0 10px;
+  margin: 0;
+  width: 200px;
+}
+/* line 288, ../sass/default.sass */
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* line 292, ../sass/default.sass */
+body.subscribe {
+  background-position: center top;
+}
+/* line 295, ../sass/default.sass */
+body.subscribe .main {
+  background: none;
+}
+/* line 299, ../sass/default.sass */
+body.subscribe footer ul {
+  padding: 25px 20px;
+  overflow: hidden;
+}
+
+@media (min-width: 480px) and (max-width: 1024px) {
+  /* line 304, ../sass/default.sass */
+  body {
+    background: #85c3b4 url(../images/bg_body.png) repeat-x center 574px;
+    background-size: 94px 618px;
+  }
+
+  /* line 308, ../sass/default.sass */
+  header {
+    zoom: 0.8;
+  }
+
+  /* line 311, ../sass/default.sass */
+  .main {
+    background-position: center -100px !important;
+  }
+  /* line 314, ../sass/default.sass */
+  .main .intro {
+    padding: 80px 30px !important;
+  }
+  /* line 317, ../sass/default.sass */
+  .main .demo {
+    min-width: 220px !important;
+    background: transparent url(../images/img_iphone_2x.png) no-repeat right 70px;
+    background-size: 211px 441px !important;
+  }
+
+  /* line 323, ../sass/default.sass */
+  footer ul {
+    padding: 20px 0;
+  }
+  /* line 326, ../sass/default.sass */
+  footer ul li {
+    padding: 5px 0 5px 40px;
+  }
+  /* line 329, ../sass/default.sass */
+  footer ul li:first-child {
+    margin-bottom: 50px;
+  }
+  /* line 332, ../sass/default.sass */
+  footer ul li:last-child {
+    padding: 5px 0 5px 10px;
+    width: 200px;
+    float: right;
+  }
+}
+@media (max-width: 480px) {
+  /* line 338, ../sass/default.sass */
+  body {
+    background: #85c3b4 url(../images/bg_body.png) repeat-x center 359px;
+    background-size: 68px 361px;
+  }
+
+  /* line 342, ../sass/default.sass */
+  header {
+    zoom: 0.5;
+  }
+
+  /* line 345, ../sass/default.sass */
+  .main {
+    background-position: center -30px;
+    background-size: 65px 235px;
+  }
+  /* line 349, ../sass/default.sass */
+  .main .intro {
+    width: 100%;
+    padding: 140px 20px 20px;
+    float: none;
+    clear: both;
+    text-align: center;
+  }
+  /* line 356, ../sass/default.sass */
+  .main .intro h2 {
+    font-size: 2.2rem;
+    margin: 0 0 5px 0;
+  }
+  /* line 360, ../sass/default.sass */
+  .main .demo {
+    width: 100%;
+    background-position: center center;
+  }
+
+  /* line 365, ../sass/default.sass */
+  footer ul {
+    padding: 20px 0;
+  }
+  /* line 368, ../sass/default.sass */
+  footer ul li {
+    padding: 5px 0 5px 40px;
+    float: left;
+    clear: both;
+  }
+  /* line 373, ../sass/default.sass */
+  footer ul li:last-child {
+    padding: 5px 0 5px 40px;
+    width: 200px;
+  }
+}
+@media (max-height: 718px) and (min-width: 480px) {
+  /* line 380, ../sass/default.sass */
+  body {
+    background: #85c3b4 url(../images/bg_body.png) repeat-x center 480px;
+  }
+
+  /* line 383, ../sass/default.sass */
+  header {
+    max-height: 600px;
+  }
+  /* line 386, ../sass/default.sass */
+  header h1 {
+    width: 432px;
+    height: 44px;
+    background: url(../images/logo_zolder.png) no-repeat center top;
+    background-size: 432px 44px;
+    margin-left: -216px;
+    top: 254px;
+  }
+  /* line 394, ../sass/default.sass */
+  header .background {
+    max-height: 600px;
+    background-size: auto 600px;
+  }
+  /* line 399, ../sass/default.sass */
+  header .background .elements .bulb {
+    background-size: 31px 132px;
+    width: 31px;
+    height: 132px;
+  }
+  /* line 404, ../sass/default.sass */
+  header .background .elements .light {
+    width: 492px;
+    height: 195px;
+    background-size: 492px 195px;
+    bottom: 130px;
+    margin-left: -246px;
+  }
+  /* line 411, ../sass/default.sass */
+  header .background .elements .box {
+    width: 178px;
+    height: 141px;
+    bottom: 30px;
+    margin-left: -89px;
+    background-size: 105px 105px;
+  }
+  /* line 418, ../sass/default.sass */
+  header .background .elements .box .box-open-left, header .background .elements .box .box-open-right {
+    width: 42px;
+    height: 42px;
+  }
+  /* line 422, ../sass/default.sass */
+  header .background .elements .box .box-open-left {
+    background-size: 42px 42px;
+    -webkit-transform-origin: 40px 40px;
+  }
+  /* line 426, ../sass/default.sass */
+  header .background .elements .box .box-open-right {
+    background-size: 42px 42px;
+    -webkit-transform-origin: 4px 40px;
+  }
+
+  /* line 430, ../sass/default.sass */
+  .main {
+    background-size: 104px 377px;
+  }
+}
